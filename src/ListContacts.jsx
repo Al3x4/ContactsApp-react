@@ -16,6 +16,10 @@ class ListContacts extends Component {
 	}
 
 	render() {
+		//destructuring objects to write less
+		const {contacts, onDeleteContact} = this.props
+		const {query} = this.state
+
 		let showingContacts
 		if (this.state.query) {
 			const match = new RegExp(escapeRegExp(this.state.query), 'i')
@@ -23,6 +27,8 @@ class ListContacts extends Component {
 		} else {
 			showingContacts = this.props.contacts
 		}
+		showingContacts.sort(sortBy('name'))
+		
 		return(
 			<div className='list-contacts'>
 				<div>
@@ -30,7 +36,7 @@ class ListContacts extends Component {
 						className='search-contacts' 
 						type="text" 
 						placeholder='Search Contacts' 
-						value = {this.state.query} 
+						value = {query} 
 						onChange = {(event) => this.updateQuery(event.target.value)}
 					/>
 				</div>
@@ -49,7 +55,7 @@ class ListContacts extends Component {
 									
 								</div>
 
-								<button onClick = {() => this.props.onDeleteContact(contact)} className='contact-remove'>
+								<button onClick = {() => onDeleteContact(contact)} className='contact-remove'>
 									Remove							
 								</button>
 
