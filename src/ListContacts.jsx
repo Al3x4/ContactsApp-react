@@ -32,7 +32,7 @@ class ListContacts extends Component {
 		showingContacts.sort(sortBy('name'))
 		
 		return(
-			<div className='list-contacts'>
+			<div>
 				<div>
 					<input 
 						className='search-contacts' 
@@ -49,7 +49,7 @@ class ListContacts extends Component {
 					</div>
 				)}
 
-				<ol className="contact-list">
+				<ol className="contact-list className='list-contacts'">
 					{showingContacts.map((contact, index) => {
 						return(
 							<li key={contact.id} className='contact-list-item'>
