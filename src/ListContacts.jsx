@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import escapeRegExp from 'escape-string-regexp'
 import sortBy from 'sort-by'
+import { Link } from 'react-router-dom'
 
 class ListContacts extends Component {
 	static propTypes = {
@@ -32,8 +33,16 @@ class ListContacts extends Component {
 		showingContacts.sort(sortBy('name'))
 		
 		return(
+<<<<<<< HEAD
 			<div>
 				<div>
+||||||| merged common ancestors
+			<div className='list-contacts'>
+				<div>
+=======
+			<div className='list-contacts'>
+				<div className="list-contacts-top">
+>>>>>>> 8286265f7292613417ec920c6bbf18645c98955a
 					<input 
 						className='search-contacts' 
 						type="text" 
@@ -41,6 +50,10 @@ class ListContacts extends Component {
 						value = {query} 
 						onChange = {(event) => this.updateQuery(event.target.value)}
 					/>
+					<Link
+					to = '/create'
+					className = 'add-contact'
+					></Link>
 				</div>
 				{showingContacts.length !== contacts.length && (
 					<div className='showing-contacts'>
