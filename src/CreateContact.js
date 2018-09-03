@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React, { Component } from 'react'
-
-class CreateContact extends Component {
-	render() {
-		return (
-			<div> create contact </div>
-		)
-	}
-}
-
-export default CreateContact
-||||||| merged common ancestors
-=======
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import ImageInput from './ImageInput'
@@ -52,4 +38,4 @@ class CreateContact extends Component {
 }
 
 export default CreateContact
->>>>>>> 8286265f7292613417ec920c6bbf18645c98955a
+

@@ -33,16 +33,8 @@ class ListContacts extends Component {
 		showingContacts.sort(sortBy('name'))
 		
 		return(
-<<<<<<< HEAD
-			<div>
-				<div>
-||||||| merged common ancestors
-			<div className='list-contacts'>
-				<div>
-=======
 			<div className='list-contacts'>
 				<div className="list-contacts-top">
->>>>>>> 8286265f7292613417ec920c6bbf18645c98955a
 					<input 
 						className='search-contacts' 
 						type="text" 
